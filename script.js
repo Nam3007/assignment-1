@@ -37,5 +37,13 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 
+/* image error handling */
+function handleImageError(imag, fallbackSrc) {
+    imag.onerror = null; // Prevent infinite loop if fallback also fails
+    if(fallbackSrc){
+        imag.src = fallbackSrc;
+    }else{
+        imag.style.display = 'none'; // Hide image if no fallback provided
+    }
 
-
+}
