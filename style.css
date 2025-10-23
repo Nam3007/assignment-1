@@ -1,0 +1,172 @@
+/*Toggle between light and dark themes using CSS variables */
+:root[data-theme="light"] {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+}
+
+:root[data-theme="dark"] {
+    --bg-color: #000000;
+    --text-color: #ffffff;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Styling for links */
+a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    text-decoration: underline;
+    transition: var(--text-color) 0.5s;
+}
+a:active {
+    color: grey;
+}
+
+
+/* Additional styling for buttons */
+button {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    width: 20px;
+    height: 20px;
+    align-items: center;
+}
+
+/* Header styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border-bottom: 2px solid var(--text-color);
+}
+
+header h1 {
+    font-size: 35px;
+    font-weight: bold;
+    width: 25%
+}
+
+.topnav{
+    display: flex;
+    overflow: hidden;
+    font-size: 25px;
+    flex-direction: row;
+    justify-content: end;
+    gap: 1.25rem;
+    color: var(--bg-color);
+    
+}
+
+
+/*Container display adjustment*/
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 80vh;
+    font-size: 1.5rem;
+}
+
+.container h2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Home Page Items */
+.homeItem1, .homeItem2 {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+}
+
+.homeItem1{
+    justify-content: start;
+}
+
+/* About Me page display adjustment */
+.aboutMeItem1{
+    flex: 1;
+    justify-content: start;
+    padding: 25px;
+    font-size: 25px;
+    
+}
+.aboutmeItem2{
+    flex: 2;
+    justify-content: start;
+    padding: 20px;
+    font-size: 20px;
+}
+
+/* Contact Me page dislay adjustment */
+.contactItem1, .contactItem2 {
+    flex: 1;
+    padding: 20px;
+}
+
+.contactItem2  li{
+    justify-content: start;
+    margin: 10px;
+    
+
+}
+.contactItem2 img{
+    width: 4%;
+    height: 4%;
+}
+
+
+/* Project page display adjustment */
+.projectItem1, .projectItem2 {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+.projectItem1{
+    justify-content: start;
+}
+
+.projectItem2{
+    justify-content: end;
+}
+
+/* Skill page display adjustment */
+.skillItem1, .skillItem2 {
+    flex: 1;
+    padding: 20px;
+    text-align: start;
+    justify-content: start;
+}
+
+/* Footer styling */
+footer {
+    display: flex;
+    justify-content: start;
+    padding: 10px 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border-top: 2px solid var(--text-color);
+    font-size: 1.2rem;
+}
+footer img{
+    width: 40px;
+    height: 40px;
+}
+
+
